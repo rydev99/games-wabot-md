@@ -1,4 +1,4 @@
-let fetch = require('node-fetch')
+import fetch from 'node-fetch'
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
     if (!(args[0] || args[1])) throw `contoh:\n${usedPrefix + command} 1 2\n\nmaka hasilnya adalah surah Al-Fatihah ayat 2 beserta audionya, dan ayatnya 1 aja`
