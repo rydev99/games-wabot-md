@@ -12,7 +12,7 @@ ${res.tafsir}
 
 ( ${res.surah} )
 `.trim())
-m.reply("*Audio* " + res.audio)
+   await conn.sendMessage(m.chat, { audio: { url: res.audio }, mimetype: 'audio/mpeg' }, { quoted: m });
 }
 handler.help = ['alquran']
 handler.tags = ['quran']
