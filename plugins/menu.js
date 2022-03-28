@@ -1,6 +1,9 @@
 import { promises } from 'fs'
 import { join } from 'path'
 import { xpRange } from '../lib/levelling.js'
+let totalfeatures = Object.values(global.plugins).filter(
+    (v) => v.help && v.tags
+  ).length;
 let tags = {
   'main': 'Main',
   'maker': 'Maker',
@@ -56,9 +59,7 @@ Total Fitur: ${totalfeatures}
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
   try {
-  let totalfeatures = Object.values(global.plugins).filter(
-    (v) => v.help && v.tags
-  ).length;
+  
     let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
     let { exp, limit, level, role } = global.db.data.users[m.sender]
     let { min, xp, max } = xpRange(level, global.multiplier)
