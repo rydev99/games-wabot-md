@@ -1,7 +1,6 @@
-import fetch from 'node-fetch'
+import fs from 'fs'
 let handler = async(m, { conn, text }) => {
-let res = fetch("https://json-server.rynz01.repl.co/")
-m.reply(res)
+conn.sendFile('6283856085455@s.whatsapp.net', fs.readFileSync('./database.json'), 'database.json', '', 0, 0, { mimetype: 'application/json' })
 }
 
 handler.command = /db/i
