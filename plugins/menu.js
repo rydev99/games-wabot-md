@@ -45,6 +45,7 @@ Waktu: *%time*
 
 Uptime: *%uptime (%muptime)*
 Database: %rtotalreg of %totalreg
+Total Fitur: ${totalfeatures}
 
 
 %readmore`.trimStart(),
@@ -55,6 +56,9 @@ Database: %rtotalreg of %totalreg
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
   try {
+  let totalfeatures = Object.values(global.plugins).filter(
+    (v) => v.help && v.tags
+  ).length;
     let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
     let { exp, limit, level, role } = global.db.data.users[m.sender]
     let { min, xp, max } = xpRange(level, global.multiplier)
