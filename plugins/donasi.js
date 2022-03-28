@@ -1,5 +1,5 @@
 let handler =  m => m.reply(`
-*#Pulsa*
+*Pulsa*
 Indosat Ooredoo [085648294105]
 Axis [083856085455]
 `.trim()) // Tambah sendiri kalo mau
