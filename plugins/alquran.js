@@ -12,7 +12,9 @@ ${res.tafsir}
 
 ( ${res.surah} )
 `.trim())
-   conn.sendMessage(m.chat, { audio: { url: res.audio}, mimetype: 'audio/mp4' })
+   await conn.sendFile(m.chat, res.audio, res.arab + '.mp3', `.trim(), m, null, {
+    asDocument: chat.useDocument
+  })
 }
 handler.help = ['alquran <114> <1>']
 handler.tags = ['quran']
