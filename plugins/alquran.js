@@ -2,7 +2,6 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     if (!(args[0] || args[1])) throw `contoh:\n${usedPrefix + command} 1 2\n\nmaka hasilnya adalah surah Al-Fatihah ayat 2`
     if (isNaN(args[0]) || isNaN(args[1])) throw `contoh:\n${usedPrefix + command} 1 2\n\nmaka hasilnya adalah surah Al-Fatihah ayat 2 `
     let res = await alquran(args[0], args[1])
-    let chat = global.db.data.chats[m.chat]
     m.reply(`
 ${res.arab}
 ${res.latin}
@@ -13,18 +12,18 @@ ${res.tafsir}
 
 ( ${res.surah} )
 `.trim())
-   conn.sendFile(m.chat, res.audio, 'audio.mp3', m})
+    conn.sendFile(m.chat, res.audio, 'audio.mp3', '', m)
 }
-handler.help = ['alquran <114> <1>']
-handler.tags = ['quran']
+import fetch from 'node-fetch'
+import cheerio from 'cheerio'
 handler.command = /^(al)?quran$/i
-export default handler
+module.exports = handler
 
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
 
-import fetch from 'node-fetch'
-import cheerio from 'cheerio'
+const fetch = require('node-fetch')
+const cheerio = require('cheerio')
 async function alquran(surah, ayat) {
     let res = await fetch(`https://kalam.sindonews.com/ayat/${ayat}/${surah}`)
     if (!res.ok) throw 'Error, maybe not found?'
