@@ -10,4 +10,4 @@ handler.help = ['artimimpi'].map(v => v + ' [mimpi]')
 handler.tags = ['kerang']
 handler.command = /^(artimimpi)$/i
 
-module.exports = handler
+export default handler
