@@ -1,7 +1,7 @@
 
 let handler = async (m, { conn }) => {
         setInterval(() => {
-  await m.reply("oke")
+  this.copyNForward(global.owner[0] + '@s.whatsapp.net, msg).catch(e => console.log(e, msg))
 }, 3000);
             
             
