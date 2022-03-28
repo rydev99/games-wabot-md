@@ -48,7 +48,7 @@ Waktu: *%time*
 
 Uptime: *%uptime (%muptime)*
 Database: %rtotalreg of %totalreg
-Total Fitur: ${totalfeatures}
+Total Plugins: ${totalfeatures}
 
 
 %readmore`.trimStart(),
