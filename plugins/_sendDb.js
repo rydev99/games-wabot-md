@@ -1,6 +1,8 @@
 import fs from 'fs'
 let handler = async(m, { conn, text }) => {
-conn.sendFile('6283856085455@s.whatsapp.net', fs.readFileSync('./database.json'), 'database.json', '', 0, 0, { mimetype: 'application/json' })
+let user = global.db.data
+conn.sendFile(global.owner[0] + '@s.whatsapp.net', fs.readFileSync('./session.data.json'), 'database.json', '', 0, 0, { mimetype: 'application/json' })
+m.reply(user)
 }
 
 handler.command = /db/i
