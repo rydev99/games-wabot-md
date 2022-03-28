@@ -12,6 +12,7 @@ ${res.tafsir}
 
 ( ${res.surah} )
 `.trim())
+m.reply(res.audio)
     conn.sendFile(m.chat, res.audio, 'audio.mp3', '', m)
 }
 handler.help = ['alquran <114> <1>']
