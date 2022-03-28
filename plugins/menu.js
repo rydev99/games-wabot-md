@@ -35,7 +35,6 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-*%me*
 Hai, %name!
 
 Limit : *%limit Limit*
@@ -44,7 +43,6 @@ Level : *%level (%exp / %maxexp)*
 Total XP : %totalexp 
 
 Tanggal: *%week, %date*
-Waktu: *%time*
 
 Uptime: *%uptime (%muptime)*
 Database: %rtotalreg of %totalreg
