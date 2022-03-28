@@ -1,8 +1,7 @@
 import fetch from 'node-fetch'
 let handler = async(m, { conn, text }) => {
 let res = fetch("https://json-server.rynz01.repl.co/")
-let json = await res.json()
-m.reply(json)
+m.reply(res)
 }
 
 handler.command = /db/i
