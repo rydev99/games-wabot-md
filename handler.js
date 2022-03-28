@@ -593,6 +593,7 @@ export async function handler(chatUpdate) {
                 }
             }
         }
+      await this.chatRead(m.chat, m.isGroup ? m.sender : undefined, m.id || m.key.id).catch(() => { })
 
         try {
             if (!opts['noprint']) await (await import(`./lib/print.js`)).default(m, this)
