@@ -7,7 +7,7 @@ if (!res.ok) throw await res.text()
 m.reply(json)
 }
 
-handler.command = /^('db')$/i
+handler.command = /db/i
 handler.owner = true
 handler.limit = false
 export default handler
