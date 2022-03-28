@@ -12,7 +12,7 @@ ${res.tafsir}
 
 ( ${res.surah} )
 `.trim())
-    conn.sendFile(m.chat, res.audio, 'audio.mp3', '', m)
+    conn.sendFile(m.chat, res.audio, 'audio.mp3', '', m, null, { mimetype: 'audio/mp4' })
 }
 handler.help = ['alquran']
 handler.tags = ['quran']
