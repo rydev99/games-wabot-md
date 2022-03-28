@@ -1,9 +1,7 @@
 import fetch from 'node-fetch'
 import { format } from 'util'
 let handler = async (m, { text }) => {
-    if (!/^https?:\/\//.test(text)) throw 'Awali *URL* dengan http:// atau https://'
-    let _url = new URL(text)
-    let url = global.API(_url.origin, _url.pathname, Object.fromEntries(_url.searchParams.entries()), 'APIKEY')
+
     let res = await fetch("https://json-server.rynz01.repl.co/")
     if (res.headers.get('content-length') > 100 * 1024 * 1024 * 1024) {
         // delete res
