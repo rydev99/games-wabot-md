@@ -4,9 +4,9 @@ import { fileURLToPath } from 'url'
 
 global.owner = [
   ['6283856085455', 'Kamu awikwok banget banh', true]
-  // [number, dia creator/owner?, dia developer?]
-] // Put your number here
-global.mods = [] // Want some help?
+
+] 
+global.mods = []
 global.prems = [] // Premium user has unlimited limit
 global.APIs = { // API Prefix
   // name: 'https://website'
