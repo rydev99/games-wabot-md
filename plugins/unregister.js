@@ -1,4 +1,4 @@
-import createHash from 'crypto'
+import { createHash } from 'crypto'
 let handler = async function (m, { args }) {
   if (!args[0]) throw 'Serial Number kosong'
   let user = global.db.data.users[m.sender]
