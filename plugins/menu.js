@@ -3,6 +3,7 @@ import { join } from 'path'
 import { xpRange } from '../lib/levelling.js'
 let tags = {
   'main': 'Main',
+  'maker': 'Maker',
   'game': 'Game',
   'rpg': 'RPG Games',
   'xp': 'Exp & Limit',
