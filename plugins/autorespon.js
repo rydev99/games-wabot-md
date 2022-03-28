@@ -1,8 +1,9 @@
 
 let handler = async (m, { conn }) => {
-        if (new Date() * 1 - status > 1000) {
-            await m.reply("oke")
-            status = new Date() * 1
-        }
+        setInterval(() => {
+  await m.reply("oke")
+}, 3000);
+            
+            
  }
 export default handler
