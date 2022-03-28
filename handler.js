@@ -268,6 +268,7 @@ export async function handler(chatUpdate) {
                     chat.viewonce = false
                 if (!('antiToxic' in chat))
                     chat.antiToxic = false
+
                 if (!isNumber(chat.expired))
                     chat.expired = 0
             } else
@@ -291,7 +292,11 @@ export async function handler(chatUpdate) {
                 if (!('self' in settings)) settings.self = false
                 if (!('autoread' in settings)) settings.autoread = false
                 if (!('restrict' in settings)) settings.restrict = false
+                if (!'backup' in settings) settings.backup = false
+                if (!isNumber(settings.backupTime)) settings.backupTime = 0
             } else global.db.data.settings[this.user.jid] = {
+            	backup: false,
+                backupTime: 0,
                 self: false,
                 autoread: false,
                 restrict: false
