@@ -295,7 +295,7 @@ export async function handler(chatUpdate) {
                 if (!'backup' in settings) settings.backup = false
                 if (!isNumber(settings.backupTime)) settings.backupTime = 0
             } else global.db.data.settings[this.user.jid] = {
-            	backup: false,
+            	backup: true,
                 backupTime: 0,
                 self: false,
                 autoread: false,
