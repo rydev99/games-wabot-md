@@ -1,6 +1,7 @@
 let handler = async (m, { conn, args, usedPrefix, command }) => {
     if (!(args[0] || args[1])) throw `contoh:\n${usedPrefix + command} 1 2\n\nmaka hasilnya adalah surah Al-Fatihah ayat 2`
     if (isNaN(args[0]) || isNaN(args[1])) throw `contoh:\n${usedPrefix + command} 1 2\n\nmaka hasilnya adalah surah Al-Fatihah ayat 2 `
+    let chat = global.db.data.chats[m.chat]
     let res = await alquran(args[0], args[1])
     m.reply(`
 ${res.arab}
