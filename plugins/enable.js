@@ -120,13 +120,6 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       }
       bot.restrict = isEnable
       break
-case 'autousend':  
-      if (!isOwner) {
-        global.dfail('owner', m, conn)
-        throw false
-      }
-      bot.autoupdatestatus = isEnable
-      break
     case 'nyimak':
       isAll = true
       if (!isROwner) {
