@@ -1,7 +1,7 @@
 import createHash from 'crypto'
 let Reg = /(.*)([.|])([0-9]*)$/i
 let handler = async function (m, { text, usedPrefix }) {
-  let user = global.db.data.users[m.sender]
+  let user = global.db.data.users
   m.reply(user)
   if (user.registered === true) throw `Anda sudah terdaftar\nMau daftar ulang? ${usedPrefix}unreg <SN|SERIAL NUMBER>`
   if (!Reg.test(text)) throw `Foemat salah\n*${usedPrefix}daftar <nama>.umur>*`
