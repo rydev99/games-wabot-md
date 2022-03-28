@@ -16,6 +16,8 @@ ${res.tafsir}
 }
 import fetch from 'node-fetch'
 import cheerio from 'cheerio'
+handler.help = ['alquran']
+handler.tags = ['quran']
 handler.command = /^(al)?quran$/i
 export default handler
 
