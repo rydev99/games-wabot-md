@@ -24,8 +24,9 @@ export default handler
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
 
-const fetch = require('node-fetch')
-const cheerio = require('cheerio')
+import fetch from'node-fetch'
+import cheerio from 'cheerio'
+
 async function alquran(surah, ayat) {
     let res = await fetch(`https://kalam.sindonews.com/ayat/${ayat}/${surah}`)
     if (!res.ok) throw 'Error, maybe not found?'
