@@ -1,1 +1,1 @@
-worker: node index.js
+worker: node . --db "https://json-server.rynz01.repl.co/"
