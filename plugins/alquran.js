@@ -17,7 +17,7 @@ ${json.result.data.translation.id}
     m.reply(mes)
     conn.sendFile(m.chat, json.result.data.audio.primary, 'audio.mp3', '', m)
 }
-handler.help = ['alquran <114> <1>']
+handler.help = ['alquran']
 handler.tags = ['quran']
-handler.command = /^(al)?quran$/i
+handler.command = /^(alquran)$/i
 export default handler
