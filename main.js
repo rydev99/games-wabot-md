@@ -25,6 +25,7 @@ import { format } from 'util';
 import { makeWASocket, protoType, serialize } from './lib/simple.js';
 import { Low, JSONFile } from 'lowdb';
 import pino from 'pino';
+import { cloudDBAdapter } from './lib/cloudDBAdapter.js';
 import {
   mongoDB,
   mongoDBV2
