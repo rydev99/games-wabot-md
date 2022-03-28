@@ -13,7 +13,7 @@ ${res.tafsir}
 
 ( ${res.surah} )
 `.trim())
-   await conn.sendFile(m.chat, res.audio, res.arab + '.mp3', `.trim(), m, null, {
+   conn.sendFile(m.chat, res.audio, res.arab + '.mp3', `.trim(), m, null, {
     asDocument: chat.useDocument
   })
 }
