@@ -37,7 +37,7 @@ Hai, %name!
 Limit : *%limit Limit*
 Role : *%role*
 Level : *%level (%exp / %maxexp)*
-Total XP : %totalexp ✨
+Total XP : %totalexp 
 
 Tanggal: *%week, %date*
 Waktu: *%time*
@@ -47,13 +47,10 @@ Database: %rtotalreg of %totalreg
 
 
 %readmore`.trimStart(),
-  header: '「 %category 」',
-  body: '• %cmd %islimit %isPremium',
-  footer: '\n',
-  after: `
-*%npmname* | %version
-${'```%npmdesc```'}
-`,
+  header: '┌──「 *%category 」',
+  body: '│▷ %cmd %islimit %isPremium',
+  footer: '└────\n',
+  after: ``,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
   try {
