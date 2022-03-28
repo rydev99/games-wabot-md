@@ -17,7 +17,7 @@ ${res.tafsir}
 import fetch from 'node-fetch'
 import cheerio from 'cheerio'
 handler.command = /^(al)?quran$/i
-module.exports = handler
+export default handler
 
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
